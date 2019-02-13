@@ -16,7 +16,7 @@ import UIKit
 ///     - Resource Module: Used to fetch some resources and does not provide an interface.
 ///     i.e. A persistance store
 ///     - Task Module: Performs a long action on the background i.e. MailSync
-public protocol ModuleType {
+public protocol ModuleType: AnyObject {
     
     /// A declaration of the internal requests a module can handle.
     ///
