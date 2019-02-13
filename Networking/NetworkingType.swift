@@ -30,8 +30,8 @@ public protocol NetworkingType {
     ///     - completionHandler: called by the module to pass the result to the calling module
     ///     - result: Used to describe the final result of the module.
     func execute<T: Codable>(request: InternalRequest,
-                             presentationBlock: (_ presentedViewController: UIViewController) -> Void,
-                             dismissBlock: (_ presentedViewController: UIViewController) -> Void,
+                             presentationBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
+                             dismissBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
                              completionHandler: @escaping (_ result: Result<T>) -> Void)
     
     /// Called by a module to communicate to the server.
@@ -52,8 +52,8 @@ extension NetworkingType {
     ///
     /// These modules are then initialized and called upon to handle the request
     public func execute<T: Codable>(request: InternalRequest,
-                                    presentationBlock: (UIViewController) -> Void,
-                                    dismissBlock: (UIViewController) -> Void,
+                                    presentationBlock: @escaping (UIViewController) -> Void,
+                                    dismissBlock: @escaping (UIViewController) -> Void,
                                     completionHandler: @escaping (Result<T>) -> Void) {
         
         let canHandleModules = modules.filter {

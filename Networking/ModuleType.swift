@@ -33,8 +33,8 @@ public protocol ModuleType {
     ///     - presentationBlock: Called the first time the module wants to present itself.
     ///     - dismissBlock: Called by the module whenever it wants to dismiss itself.
     ///     - presentedViewController: The module initial view controller
-    init(presentationBlock: (_ presentedViewController: UIViewController) -> Void,
-         dismissBlock: (_ presentedViewController: UIViewController) -> Void)
+    init(presentationBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
+         dismissBlock: @escaping (_ presentedViewController: UIViewController) -> Void)
     
     
     /// Executes an internal request
