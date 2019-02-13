@@ -17,8 +17,7 @@ public struct PaymentPayRequestBody: Codable {
 }
 
 public struct PaymentPayRequest: InternalRequest {
-    public static var regexPath = "pay"
-    public static var responseType: Codable.Type = PaymentResponse.self
+    public static var responseType: Any.Type = PaymentResponse.self
     
     fileprivate let data: PaymentPayRequestBody
     

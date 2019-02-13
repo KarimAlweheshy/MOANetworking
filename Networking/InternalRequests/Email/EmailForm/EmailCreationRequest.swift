@@ -27,11 +27,20 @@ public struct EmailCreationRequestBody: Codable {
         self.body = body
         self.attachementsURLs = attachementsURLs
     }
+    
+    public init() {
+        draftID = nil
+        receiversIDs = nil
+        ccIDs = nil
+        bccIDs = nil
+        subject = nil
+        body = nil
+        attachementsURLs = nil
+    }
 }
 
 public struct EmailCreationRequest: InternalRequest {
-    public static var regexPath = "emails/create"
-    public static var responseType: Codable.Type = EmailResponse.self
+    public static var responseType: Any.Type = EmailResponse.self
     
     public let data: EmailCreationRequestBody
     

@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F66DABB622141551005DD98F /* DumModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DABB522141551005DD98F /* DumModule.swift */; };
-		F66EB4712211D2DB00D177C5 /* EmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4702211D2DB00D177C5 /* EmailResponse.swift */; };
+		F66EB4712211D2DB00D177C5 /* EmailResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4702211D2DB00D177C5 /* EmailResponses.swift */; };
 		F66EB4742211D2FF00D177C5 /* EmailCreationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4732211D2FF00D177C5 /* EmailCreationRequest.swift */; };
 		F66EB4762211D30900D177C5 /* EmailListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4752211D30900D177C5 /* EmailListRequest.swift */; };
 		F66EB4782211D31300D177C5 /* EmailSelectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4772211D31200D177C5 /* EmailSelectionRequest.swift */; };
 		F66EB47A2211D32100D177C5 /* EmailDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4792211D32100D177C5 /* EmailDetailsRequest.swift */; };
+		F6848ACD221456B500DD1EEA /* MailSyncFetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848ACC221456B500DD1EEA /* MailSyncFetchRequests.swift */; };
+		F6848AD12214570300DD1EEA /* MailSyncUpdateRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848AD02214570300DD1EEA /* MailSyncUpdateRequests.swift */; };
+		F6848AD32214570C00DD1EEA /* MailSyncDeleteRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848AD22214570C00DD1EEA /* MailSyncDeleteRequests.swift */; };
 		F6C93AB2220D9506004A6737 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93AA8220D9506004A6737 /* Networking.framework */; };
 		F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC5220D9539004A6737 /* ModuleType.swift */; };
 		F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC7220D9539004A6737 /* AuthenticationResponse.swift */; };
 		F6C93AD9220D9539004A6737 /* ExplicitLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93ACA220D9539004A6737 /* ExplicitLoginRequest.swift */; };
 		F6C93ADC220D9539004A6737 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93ACE220D9539004A6737 /* ResponseError.swift */; };
 		F6C93ADD220D9539004A6737 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93ACF220D9539004A6737 /* Result.swift */; };
-		F6C93ADE220D9539004A6737 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AD0220D9539004A6737 /* Request.swift */; };
 		F6C93ADF220D9539004A6737 /* RemoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AD1220D9539004A6737 /* RemoteRequest.swift */; };
 		F6C93AE0220D9539004A6737 /* InternalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AD2220D9539004A6737 /* InternalRequest.swift */; };
 		F6C93AE1220D9539004A6737 /* NetworkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AD3220D9539004A6737 /* NetworkingType.swift */; };
@@ -46,11 +48,14 @@
 
 /* Begin PBXFileReference section */
 		F66DABB522141551005DD98F /* DumModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DumModule.swift; sourceTree = "<group>"; };
-		F66EB4702211D2DB00D177C5 /* EmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResponse.swift; sourceTree = "<group>"; };
+		F66EB4702211D2DB00D177C5 /* EmailResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResponses.swift; sourceTree = "<group>"; };
 		F66EB4732211D2FF00D177C5 /* EmailCreationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCreationRequest.swift; sourceTree = "<group>"; };
 		F66EB4752211D30900D177C5 /* EmailListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListRequest.swift; sourceTree = "<group>"; };
 		F66EB4772211D31200D177C5 /* EmailSelectionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSelectionRequest.swift; sourceTree = "<group>"; };
 		F66EB4792211D32100D177C5 /* EmailDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDetailsRequest.swift; sourceTree = "<group>"; };
+		F6848ACC221456B500DD1EEA /* MailSyncFetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncFetchRequests.swift; sourceTree = "<group>"; };
+		F6848AD02214570300DD1EEA /* MailSyncUpdateRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncUpdateRequests.swift; sourceTree = "<group>"; };
+		F6848AD22214570C00DD1EEA /* MailSyncDeleteRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncDeleteRequests.swift; sourceTree = "<group>"; };
 		F6C93AA8220D9506004A6737 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93AAC220D9506004A6737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C93AB1220D9506004A6737 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +65,6 @@
 		F6C93ACA220D9539004A6737 /* ExplicitLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplicitLoginRequest.swift; sourceTree = "<group>"; };
 		F6C93ACE220D9539004A6737 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		F6C93ACF220D9539004A6737 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		F6C93AD0220D9539004A6737 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		F6C93AD1220D9539004A6737 /* RemoteRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteRequest.swift; sourceTree = "<group>"; };
 		F6C93AD2220D9539004A6737 /* InternalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalRequest.swift; sourceTree = "<group>"; };
 		F6C93AD3220D9539004A6737 /* NetworkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingType.swift; sourceTree = "<group>"; };
@@ -94,24 +98,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F66EB46F2211D2C300D177C5 /* Email */ = {
+		F66EB46F2211D2C300D177C5 /* EmailList */ = {
 			isa = PBXGroup;
 			children = (
-				F66EB4702211D2DB00D177C5 /* EmailResponse.swift */,
-				F66EB4722211D2F500D177C5 /* Requests */,
+				F66EB4752211D30900D177C5 /* EmailListRequest.swift */,
+				F66EB4772211D31200D177C5 /* EmailSelectionRequest.swift */,
 			);
-			path = Email;
+			path = EmailList;
 			sourceTree = "<group>";
 		};
-		F66EB4722211D2F500D177C5 /* Requests */ = {
+		F6848AC82214565D00DD1EEA /* EmailDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F66EB4792211D32100D177C5 /* EmailDetailsRequest.swift */,
+			);
+			path = EmailDetails;
+			sourceTree = "<group>";
+		};
+		F6848AC92214566300DD1EEA /* EmailForm */ = {
 			isa = PBXGroup;
 			children = (
 				F66EB4732211D2FF00D177C5 /* EmailCreationRequest.swift */,
-				F66EB4752211D30900D177C5 /* EmailListRequest.swift */,
-				F66EB4772211D31200D177C5 /* EmailSelectionRequest.swift */,
-				F66EB4792211D32100D177C5 /* EmailDetailsRequest.swift */,
 			);
-			path = Requests;
+			path = EmailForm;
+			sourceTree = "<group>";
+		};
+		F6848ACA2214566900DD1EEA /* EmailSync */ = {
+			isa = PBXGroup;
+			children = (
+				F6848ACC221456B500DD1EEA /* MailSyncFetchRequests.swift */,
+				F6848AD02214570300DD1EEA /* MailSyncUpdateRequests.swift */,
+				F6848AD22214570C00DD1EEA /* MailSyncDeleteRequests.swift */,
+			);
+			path = EmailSync;
+			sourceTree = "<group>";
+		};
+		F6848ACB2214568F00DD1EEA /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				F66EB4702211D2DB00D177C5 /* EmailResponses.swift */,
+				F6848ACA2214566900DD1EEA /* EmailSync */,
+				F6848AC92214566300DD1EEA /* EmailForm */,
+				F6848AC82214565D00DD1EEA /* EmailDetails */,
+				F66EB46F2211D2C300D177C5 /* EmailList */,
+			);
+			path = Email;
 			sourceTree = "<group>";
 		};
 		F6C93A9E220D9506004A6737 = {
@@ -176,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				F6C93ACF220D9539004A6737 /* Result.swift */,
-				F6C93AD0220D9539004A6737 /* Request.swift */,
 				F6C93AD1220D9539004A6737 /* RemoteRequest.swift */,
 				F6C93AD2220D9539004A6737 /* InternalRequest.swift */,
 				F6C93ACE220D9539004A6737 /* ResponseError.swift */,
@@ -217,7 +247,7 @@
 		F6C93BD92211BDF9004A6737 /* InternalRequests */ = {
 			isa = PBXGroup;
 			children = (
-				F66EB46F2211D2C300D177C5 /* Email */,
+				F6848ACB2214568F00DD1EEA /* Email */,
 				F6C93AF0220DA640004A6737 /* Payment */,
 				F6C93AC6220D9539004A6737 /* Authentication */,
 			);
@@ -332,11 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66EB4712211D2DB00D177C5 /* EmailResponse.swift in Sources */,
+				F66EB4712211D2DB00D177C5 /* EmailResponses.swift in Sources */,
 				F6C93AF5220DA66A004A6737 /* PaymentPayRequest.swift in Sources */,
+				F6848AD12214570300DD1EEA /* MailSyncUpdateRequests.swift in Sources */,
 				F6C93AD9220D9539004A6737 /* ExplicitLoginRequest.swift in Sources */,
 				F6C93ADC220D9539004A6737 /* ResponseError.swift in Sources */,
-				F6C93ADE220D9539004A6737 /* Request.swift in Sources */,
 				F66EB47A2211D32100D177C5 /* EmailDetailsRequest.swift in Sources */,
 				F6C93AF3220DA656004A6737 /* PaymentResponse.swift in Sources */,
 				F6C93AE0220D9539004A6737 /* InternalRequest.swift in Sources */,
@@ -345,7 +375,9 @@
 				F6C93BD72211B922004A6737 /* HTTPMethod.swift in Sources */,
 				F66EB4742211D2FF00D177C5 /* EmailCreationRequest.swift in Sources */,
 				F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */,
+				F6848AD32214570C00DD1EEA /* MailSyncDeleteRequests.swift in Sources */,
 				F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */,
+				F6848ACD221456B500DD1EEA /* MailSyncFetchRequests.swift in Sources */,
 				F66EB4782211D31300D177C5 /* EmailSelectionRequest.swift in Sources */,
 				F6C93ADF220D9539004A6737 /* RemoteRequest.swift in Sources */,
 				F6C93AE1220D9539004A6737 /* NetworkingType.swift in Sources */,

@@ -19,9 +19,7 @@ public struct ExplicitLoginRequestBody: Codable {
 }
 
 public struct ExplicitLoginRequest: InternalRequest {
-    
-    public static let regexPath = "/login"
-    public static let responseType: Codable.Type = AuthenticationResponse.self
+    public static var responseType: Any.Type = AuthenticationResponse.self
     
     public let data: ExplicitLoginRequestBody
     

@@ -17,8 +17,7 @@ public struct EmailDetailsRequestBody: Codable {
 }
 
 public struct EmailDetailsRequest: InternalRequest {
-    public static var regexPath = "^\\/emails\\/([^\\/]+?)\\/?$"
-    public static var responseType: Codable.Type = EmailResponse.self
+    public static var responseType: Any.Type = EmailResponse.self
     
     public let data: EmailDetailsRequestBody
     

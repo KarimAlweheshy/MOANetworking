@@ -29,10 +29,10 @@ public protocol NetworkingType {
     ///     - presentedViewController: The initial view controller of the module
     ///     - completionHandler: called by the module to pass the result to the calling module
     ///     - result: Used to describe the final result of the module.
-    func execute<T: Codable>(request: InternalRequest,
-                             presentationBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
-                             dismissBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
-                             completionHandler: @escaping (_ result: Result<T>) -> Void)
+    func execute<T>(request: InternalRequest,
+                    presentationBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
+                    dismissBlock: @escaping (_ presentedViewController: UIViewController) -> Void,
+                    completionHandler: @escaping (_ result: Result<T>) -> Void)
     
     /// Called by a module to communicate to the server.
     /// - Parameters:
@@ -51,10 +51,10 @@ extension NetworkingType {
     ///     2 - Have the same T.Type declared as a responseType in these matching capabilities
     ///
     /// These modules are then initialized and called upon to handle the request
-    public func execute<T: Codable>(request: InternalRequest,
-                                    presentationBlock: @escaping (UIViewController) -> Void,
-                                    dismissBlock: @escaping (UIViewController) -> Void,
-                                    completionHandler: @escaping (Result<T>) -> Void) {
+    public func execute<T>(request: InternalRequest,
+                           presentationBlock: @escaping (UIViewController) -> Void,
+                           dismissBlock: @escaping (UIViewController) -> Void,
+                           completionHandler: @escaping (Result<T>) -> Void) {
         
         let canHandleModules = modules.filter {
             let hasCapability = $0.capabilities.contains { $0 == type(of: request) }
@@ -68,8 +68,10 @@ extension NetworkingType {
         }
         
         canHandleModules.forEach { Module in
-            let module = Module.init(presentationBlock: presentationBlock, dismissBlock: dismissBlock)
-            module.execute(networking: self, request: request, completionHandler: completionHandler)
+            let module = Module.init(presentationBlock: presentationBlock,
+                                     dismissBlock: dismissBlock)
+            module.execute(networking: self, request: request,
+                           completionHandler: completionHandler)
         }
     }
 }

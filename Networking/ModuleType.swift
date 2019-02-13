@@ -52,7 +52,7 @@ public protocol ModuleType {
     ///     - completionHandler: should be called after the module finished processing internal
     ///     request.
     ///     - result: Should indicate the result of the internal request processing by the module.
-    func execute<T: Codable>(networking: NetworkingType,
-                             request: InternalRequest,
-                             completionHandler: @escaping (_ result: Result<T>) -> Void)
+    func execute<T>(networking: NetworkingType,
+                    request: InternalRequest,
+                    completionHandler: @escaping (_ result: Result<T>) -> Void)
 }
