@@ -6,11 +6,21 @@
 //  Copyright © 2019 Karim Alweheshy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Networking
 
-struct DumModule: Module {
-    static var Facade: ModuleFacade.Type = DumFacade.self
-    static var Consumer: ModuleConsumer.Type = DumConsumer.self
+struct DumModule: ModuleType {
+    static var capabilities: [InternalRequest.Type] = [DumRequest.self]
+    
+    init(presentationBlock: (UIViewController) -> Void, dismissBlock: (UIViewController) -> Void) {
+    }
+    
+    func execute<T: Codable>(networking: NetworkingType, request: InternalRequest, completionHandler: @escaping (Result<T>) -> Void) {
+        if let response = DumResponse() as? T {
+            completionHandler(.success(response))
+        } else {
+            completionHandler(.error(ResponseError.other))
+        }
+    }
 }
 

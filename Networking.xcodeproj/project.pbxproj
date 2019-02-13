@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66DABB622141551005DD98F /* DumModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DABB522141551005DD98F /* DumModule.swift */; };
 		F66EB4712211D2DB00D177C5 /* EmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4702211D2DB00D177C5 /* EmailResponse.swift */; };
 		F66EB4742211D2FF00D177C5 /* EmailCreationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4732211D2FF00D177C5 /* EmailCreationRequest.swift */; };
 		F66EB4762211D30900D177C5 /* EmailListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4752211D30900D177C5 /* EmailListRequest.swift */; };
 		F66EB4782211D31300D177C5 /* EmailSelectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4772211D31200D177C5 /* EmailSelectionRequest.swift */; };
 		F66EB47A2211D32100D177C5 /* EmailDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66EB4792211D32100D177C5 /* EmailDetailsRequest.swift */; };
 		F6C93AB2220D9506004A6737 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93AA8220D9506004A6737 /* Networking.framework */; };
-		F6C93AD4220D9539004A6737 /* ModuleConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC3220D9539004A6737 /* ModuleConsumer.swift */; };
-		F6C93AD5220D9539004A6737 /* ModuleFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC4220D9539004A6737 /* ModuleFacade.swift */; };
-		F6C93AD6220D9539004A6737 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC5220D9539004A6737 /* Module.swift */; };
+		F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC5220D9539004A6737 /* ModuleType.swift */; };
 		F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC7220D9539004A6737 /* AuthenticationResponse.swift */; };
 		F6C93AD9220D9539004A6737 /* ExplicitLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93ACA220D9539004A6737 /* ExplicitLoginRequest.swift */; };
 		F6C93ADC220D9539004A6737 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93ACE220D9539004A6737 /* ResponseError.swift */; };
@@ -26,15 +25,11 @@
 		F6C93AE1220D9539004A6737 /* NetworkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AD3220D9539004A6737 /* NetworkingType.swift */; };
 		F6C93AF3220DA656004A6737 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AF2220DA656004A6737 /* PaymentResponse.swift */; };
 		F6C93AF5220DA66A004A6737 /* PaymentPayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AF4220DA66A004A6737 /* PaymentPayRequest.swift */; };
-		F6C93BB72211AE03004A6737 /* FacadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BB62211AE03004A6737 /* FacadeTests.swift */; };
 		F6C93BB92211AE16004A6737 /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BB82211AE16004A6737 /* ModuleTests.swift */; };
 		F6C93BBD2211AE53004A6737 /* RemoteRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BBC2211AE53004A6737 /* RemoteRequestTests.swift */; };
-		F6C93BC72211B60C004A6737 /* DumConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BC62211B60C004A6737 /* DumConsumer.swift */; };
-		F6C93BC92211B61F004A6737 /* DumFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BC82211B61F004A6737 /* DumFacade.swift */; };
 		F6C93BCB2211B630004A6737 /* DumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BCA2211B630004A6737 /* DumResponse.swift */; };
 		F6C93BCD2211B644004A6737 /* WrongDumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BCC2211B644004A6737 /* WrongDumResponse.swift */; };
 		F6C93BCF2211B655004A6737 /* DumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BCE2211B655004A6737 /* DumRequest.swift */; };
-		F6C93BD12211B667004A6737 /* DumModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BD02211B667004A6737 /* DumModule.swift */; };
 		F6C93BD32211B67C004A6737 /* DumNetorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BD22211B67C004A6737 /* DumNetorking.swift */; };
 		F6C93BD72211B922004A6737 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93BD62211B922004A6737 /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66DABB522141551005DD98F /* DumModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DumModule.swift; sourceTree = "<group>"; };
 		F66EB4702211D2DB00D177C5 /* EmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResponse.swift; sourceTree = "<group>"; };
 		F66EB4732211D2FF00D177C5 /* EmailCreationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCreationRequest.swift; sourceTree = "<group>"; };
 		F66EB4752211D30900D177C5 /* EmailListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListRequest.swift; sourceTree = "<group>"; };
@@ -59,9 +55,7 @@
 		F6C93AAC220D9506004A6737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C93AB1220D9506004A6737 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93AB8220D9506004A6737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6C93AC3220D9539004A6737 /* ModuleConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleConsumer.swift; sourceTree = "<group>"; };
-		F6C93AC4220D9539004A6737 /* ModuleFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleFacade.swift; sourceTree = "<group>"; };
-		F6C93AC5220D9539004A6737 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		F6C93AC5220D9539004A6737 /* ModuleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleType.swift; sourceTree = "<group>"; };
 		F6C93AC7220D9539004A6737 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
 		F6C93ACA220D9539004A6737 /* ExplicitLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplicitLoginRequest.swift; sourceTree = "<group>"; };
 		F6C93ACE220D9539004A6737 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
@@ -72,15 +66,11 @@
 		F6C93AD3220D9539004A6737 /* NetworkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingType.swift; sourceTree = "<group>"; };
 		F6C93AF2220DA656004A6737 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		F6C93AF4220DA66A004A6737 /* PaymentPayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPayRequest.swift; sourceTree = "<group>"; };
-		F6C93BB62211AE03004A6737 /* FacadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeTests.swift; sourceTree = "<group>"; };
 		F6C93BB82211AE16004A6737 /* ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		F6C93BBC2211AE53004A6737 /* RemoteRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRequestTests.swift; sourceTree = "<group>"; };
-		F6C93BC62211B60C004A6737 /* DumConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumConsumer.swift; sourceTree = "<group>"; };
-		F6C93BC82211B61F004A6737 /* DumFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumFacade.swift; sourceTree = "<group>"; };
 		F6C93BCA2211B630004A6737 /* DumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumResponse.swift; sourceTree = "<group>"; };
 		F6C93BCC2211B644004A6737 /* WrongDumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongDumResponse.swift; sourceTree = "<group>"; };
 		F6C93BCE2211B655004A6737 /* DumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumRequest.swift; sourceTree = "<group>"; };
-		F6C93BD02211B667004A6737 /* DumModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumModule.swift; sourceTree = "<group>"; };
 		F6C93BD22211B67C004A6737 /* DumNetorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumNetorking.swift; sourceTree = "<group>"; };
 		F6C93BD62211B922004A6737 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,9 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				F6C93BD92211BDF9004A6737 /* InternalRequests */,
-				F6C93AC2220D9539004A6737 /* Module */,
 				F6C93ACD220D9539004A6737 /* Request */,
 				F6C93AD3220D9539004A6737 /* NetworkingType.swift */,
+				F6C93AC5220D9539004A6737 /* ModuleType.swift */,
 				F6C93AAC220D9506004A6737 /* Info.plist */,
 			);
 			path = Networking;
@@ -159,21 +149,10 @@
 			children = (
 				F6C93BC52211B5FD004A6737 /* TestModels */,
 				F6C93BB82211AE16004A6737 /* ModuleTests.swift */,
-				F6C93BB62211AE03004A6737 /* FacadeTests.swift */,
 				F6C93BBC2211AE53004A6737 /* RemoteRequestTests.swift */,
 				F6C93AB8220D9506004A6737 /* Info.plist */,
 			);
 			path = NetworkingTests;
-			sourceTree = "<group>";
-		};
-		F6C93AC2220D9539004A6737 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				F6C93AC3220D9539004A6737 /* ModuleConsumer.swift */,
-				F6C93AC4220D9539004A6737 /* ModuleFacade.swift */,
-				F6C93AC5220D9539004A6737 /* Module.swift */,
-			);
-			path = Module;
 			sourceTree = "<group>";
 		};
 		F6C93AC6220D9539004A6737 /* Authentication */ = {
@@ -196,12 +175,12 @@
 		F6C93ACD220D9539004A6737 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				F6C93ACE220D9539004A6737 /* ResponseError.swift */,
 				F6C93ACF220D9539004A6737 /* Result.swift */,
 				F6C93AD0220D9539004A6737 /* Request.swift */,
 				F6C93AD1220D9539004A6737 /* RemoteRequest.swift */,
-				F6C93BD62211B922004A6737 /* HTTPMethod.swift */,
 				F6C93AD2220D9539004A6737 /* InternalRequest.swift */,
+				F6C93ACE220D9539004A6737 /* ResponseError.swift */,
+				F6C93BD62211B922004A6737 /* HTTPMethod.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -226,12 +205,10 @@
 		F6C93BC52211B5FD004A6737 /* TestModels */ = {
 			isa = PBXGroup;
 			children = (
-				F6C93BC62211B60C004A6737 /* DumConsumer.swift */,
-				F6C93BC82211B61F004A6737 /* DumFacade.swift */,
+				F66DABB522141551005DD98F /* DumModule.swift */,
 				F6C93BCA2211B630004A6737 /* DumResponse.swift */,
 				F6C93BCC2211B644004A6737 /* WrongDumResponse.swift */,
 				F6C93BCE2211B655004A6737 /* DumRequest.swift */,
-				F6C93BD02211B667004A6737 /* DumModule.swift */,
 				F6C93BD22211B67C004A6737 /* DumNetorking.swift */,
 			);
 			path = TestModels;
@@ -357,9 +334,7 @@
 			files = (
 				F66EB4712211D2DB00D177C5 /* EmailResponse.swift in Sources */,
 				F6C93AF5220DA66A004A6737 /* PaymentPayRequest.swift in Sources */,
-				F6C93AD4220D9539004A6737 /* ModuleConsumer.swift in Sources */,
 				F6C93AD9220D9539004A6737 /* ExplicitLoginRequest.swift in Sources */,
-				F6C93AD5220D9539004A6737 /* ModuleFacade.swift in Sources */,
 				F6C93ADC220D9539004A6737 /* ResponseError.swift in Sources */,
 				F6C93ADE220D9539004A6737 /* Request.swift in Sources */,
 				F66EB47A2211D32100D177C5 /* EmailDetailsRequest.swift in Sources */,
@@ -370,7 +345,7 @@
 				F6C93BD72211B922004A6737 /* HTTPMethod.swift in Sources */,
 				F66EB4742211D2FF00D177C5 /* EmailCreationRequest.swift in Sources */,
 				F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */,
-				F6C93AD6220D9539004A6737 /* Module.swift in Sources */,
+				F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */,
 				F66EB4782211D31300D177C5 /* EmailSelectionRequest.swift in Sources */,
 				F6C93ADF220D9539004A6737 /* RemoteRequest.swift in Sources */,
 				F6C93AE1220D9539004A6737 /* NetworkingType.swift in Sources */,
@@ -381,16 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C93BC72211B60C004A6737 /* DumConsumer.swift in Sources */,
 				F6C93BD32211B67C004A6737 /* DumNetorking.swift in Sources */,
-				F6C93BB72211AE03004A6737 /* FacadeTests.swift in Sources */,
-				F6C93BC92211B61F004A6737 /* DumFacade.swift in Sources */,
 				F6C93BCD2211B644004A6737 /* WrongDumResponse.swift in Sources */,
 				F6C93BCF2211B655004A6737 /* DumRequest.swift in Sources */,
-				F6C93BD12211B667004A6737 /* DumModule.swift in Sources */,
 				F6C93BCB2211B630004A6737 /* DumResponse.swift in Sources */,
 				F6C93BBD2211AE53004A6737 /* RemoteRequestTests.swift in Sources */,
 				F6C93BB92211AE16004A6737 /* ModuleTests.swift in Sources */,
+				F66DABB622141551005DD98F /* DumModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

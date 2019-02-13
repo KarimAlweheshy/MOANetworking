@@ -10,7 +10,7 @@ import XCTest
 import Networking
 
 final class ModuleTests: XCTestCase {
-    let module = DumModule.self
+    let module = DumModule(presentationBlock: { _ in }, dismissBlock: { _ in })
     
     override func setUp() {
         super.setUp()
@@ -23,46 +23,61 @@ final class ModuleTests: XCTestCase {
     func testRegisteredRequestCorrectResponse() {
         let expectation = XCTestExpectation(description: #function)
         let request = DumRequest()
-        module.execute(networking: DumNetworking(), presentationBlock: nil, dismissBlock: nil, request: request) { (result: Result<DumResponse>) in
+        let networking = DumNetworking(modules: [DumModule.self])
+        networking.execute(request: request,
+                           presentationBlock: { _ in },
+                           dismissBlock: { _ in },
+                           completionHandler: { (result: Result<DumResponse>) in
             switch result {
             case .success: expectation.fulfill()
             case .error: XCTFail("Should not receive an error for registered request!")
             }
-        }
+        })
         wait(for: [expectation], timeout: TimeInterval.greatestFiniteMagnitude)
     }
     
     func testRegisteredRequestWrongResponse() {
         let expectation = XCTestExpectation(description: #function)
         let request = DumRequest()
-        module.execute(networking: DumNetworking(), presentationBlock: nil, dismissBlock: nil, request: request) { (result: Result<AuthenticationResponse>) in
+        let networking = DumNetworking(modules: [DumModule.self])
+        networking.execute(request: request,
+                           presentationBlock: { _ in },
+                           dismissBlock: { _ in },
+                           completionHandler: { (result: Result<AuthenticationResponse>) in
             switch result {
             case .success: XCTFail("Should receive an error a wrong expected return type!")
             case .error(let error):
-                if let error = error as? ResponseError, error.errorCode == 400 {
+                if let error = error as? ResponseError,
+                    error.errorCode == ResponseError.badRequest400(error: nil).errorCode {
                     expectation.fulfill()
                 } else {
                     XCTFail("Should receive a 400 bad request error!\nReceived \(error.localizedDescription) instead!")
                 }
             }
-        }
+        })
         wait(for: [expectation], timeout: TimeInterval.greatestFiniteMagnitude)
     }
     
     func testUnregisteredRequest() {
         let expectation = XCTestExpectation(description: #function)
         let request = ExplicitLoginRequest(data: ExplicitLoginRequestBody(email: nil, password: nil))
-        module.execute(networking: DumNetworking(), presentationBlock: nil, dismissBlock: nil, request: request) { (result: Result<DumResponse>) in
+        
+        let networking = DumNetworking(modules: [DumModule.self])
+        networking.execute(request: request,
+                           presentationBlock: { _ in },
+                           dismissBlock: { _ in },
+                           completionHandler: { (result: Result<DumResponse>) in
             switch result {
             case .success: XCTFail("Should receive an error a wrong expected return type!")
             case .error(let error):
-                if let error = error as? ResponseError, error.errorCode == 400 {
+                if let error = error as? ResponseError,
+                    error.errorCode == ResponseError.badRequest400(error: nil).errorCode {
                     expectation.fulfill()
                 } else {
                     XCTFail("Should receive a 400 bad request error!\nReceived \(error.localizedDescription) instead!")
                 }
             }
-        }
+        })
         wait(for: [expectation], timeout: TimeInterval.greatestFiniteMagnitude)
     }
     
