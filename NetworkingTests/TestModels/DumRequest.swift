@@ -10,6 +10,5 @@ import Foundation
 import Networking
 
 struct DumRequest: InternalRequest {
-    static var regexPath: String = "/pay"
-    static var responseType: Codable.Type = DumResponse.self
+    static var responseType: Any.Type = DumResponse.self
 }

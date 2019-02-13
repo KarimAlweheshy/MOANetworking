@@ -15,7 +15,8 @@ struct DumModule: ModuleType {
     init(presentationBlock: (UIViewController) -> Void, dismissBlock: (UIViewController) -> Void) {
     }
     
-    func execute<T: Codable>(networking: NetworkingType, request: InternalRequest, completionHandler: @escaping (Result<T>) -> Void) {
+    func execute<T>(networking: NetworkingType, request: InternalRequest,
+                    completionHandler: @escaping (Result<T>) -> Void) {
         if let response = DumResponse() as? T {
             completionHandler(.success(response))
         } else {
