@@ -27,3 +27,15 @@ public struct ExplicitLoginRequest: InternalRequest {
         self.data = data
     }
 }
+
+// MARK: - RemoteTranslatable
+extension ExplicitLoginRequest: RemoteTranslatable {
+    static func == (lhs: ExplicitLoginRequest, rhs: URL) -> ExplicitLoginRequest? {
+        guard rhs.pathComponents.first == "auth" else { return nil }
+        guard rhs.pathComponents.count > 2, rhs.pathComponents[1] == "login" else { return nil }
+        guard let components = URLComponents(url: rhs, resolvingAgainstBaseURL: false) else { return nil }
+        let email = components.queryItems?.first { $0.name == "email" }?.value
+        let password = components.queryItems?.first { $0.name == "password" }?.value
+        return ExplicitLoginRequest(data: ExplicitLoginRequestBody(email: email, password: password))
+    }
+}
