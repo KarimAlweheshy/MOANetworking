@@ -9,10 +9,13 @@
 import UIKit
 
 /// NetworkingType provides a protocol to handle intra-modules as well as client-server communications
-public protocol NetworkingType {
+public protocol NetworkingType: AnyObject {
     
     /// Regisetred modules
-    var modules: [ModuleType.Type] { get }
+    var registeredModules: [ModuleType.Type] { get }
+    
+    // Currently running modules
+    var inMemoryModule: [ModuleType] { get set }
     
     /// Called by a module to communicate to another regsitered module.
     ///
@@ -56,7 +59,7 @@ extension NetworkingType {
                            dismissBlock: @escaping (UIViewController) -> Void,
                            completionHandler: @escaping (Result<T>) -> Void) {
         
-        let canHandleModules = modules.filter {
+        let canHandleModules = registeredModules.filter {
             let hasCapability = $0.capabilities.contains { $0 == type(of: request) }
             let hasCorrectResponseType = T.self == type(of: request).responseType
             return hasCapability && hasCorrectResponseType
@@ -70,8 +73,11 @@ extension NetworkingType {
         canHandleModules.forEach { Module in
             let module = Module.init(presentationBlock: presentationBlock,
                                      dismissBlock: dismissBlock)
-            module.execute(networking: self, request: request,
-                           completionHandler: completionHandler)
+            module.execute(networking: self, request: request) { (result: Result<T>) in
+                self.inMemoryModule.removeAll { $0 === module }
+                completionHandler(result)
+            }
+            inMemoryModule.append(module)
         }
     }
 }

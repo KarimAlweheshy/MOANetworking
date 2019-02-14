@@ -10,10 +10,10 @@ import UIKit
 import Networking
 
 struct DumNetworking: NetworkingType {
-    let modules: [ModuleType.Type]
+    let registeredModules: [ModuleType.Type]
     
     init(modules: [ModuleType.Type]) {
-        self.modules = modules
+        self.registeredModules = modules
     }
     
     func execute<T: Codable>(request: RemoteRequest,

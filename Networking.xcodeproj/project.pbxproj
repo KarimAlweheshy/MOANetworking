@@ -16,6 +16,7 @@
 		F6848ACD221456B500DD1EEA /* MailSyncFetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848ACC221456B500DD1EEA /* MailSyncFetchRequests.swift */; };
 		F6848AD12214570300DD1EEA /* MailSyncUpdateRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848AD02214570300DD1EEA /* MailSyncUpdateRequests.swift */; };
 		F6848AD32214570C00DD1EEA /* MailSyncDeleteRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848AD22214570C00DD1EEA /* MailSyncDeleteRequests.swift */; };
+		F6848B6522155EE500DD1EEA /* RemoteTranslatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848B6422155EE500DD1EEA /* RemoteTranslatable.swift */; };
 		F6C93AB2220D9506004A6737 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93AA8220D9506004A6737 /* Networking.framework */; };
 		F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC5220D9539004A6737 /* ModuleType.swift */; };
 		F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93AC7220D9539004A6737 /* AuthenticationResponse.swift */; };
@@ -56,6 +57,7 @@
 		F6848ACC221456B500DD1EEA /* MailSyncFetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncFetchRequests.swift; sourceTree = "<group>"; };
 		F6848AD02214570300DD1EEA /* MailSyncUpdateRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncUpdateRequests.swift; sourceTree = "<group>"; };
 		F6848AD22214570C00DD1EEA /* MailSyncDeleteRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSyncDeleteRequests.swift; sourceTree = "<group>"; };
+		F6848B6422155EE500DD1EEA /* RemoteTranslatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTranslatable.swift; sourceTree = "<group>"; };
 		F6C93AA8220D9506004A6737 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93AAC220D9506004A6737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C93AB1220D9506004A6737 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 			children = (
 				F6C93ACF220D9539004A6737 /* Result.swift */,
 				F6C93AD1220D9539004A6737 /* RemoteRequest.swift */,
+				F6848B6422155EE500DD1EEA /* RemoteTranslatable.swift */,
 				F6C93AD2220D9539004A6737 /* InternalRequest.swift */,
 				F6C93ACE220D9539004A6737 /* ResponseError.swift */,
 				F6C93BD62211B922004A6737 /* HTTPMethod.swift */,
@@ -374,6 +377,7 @@
 				F66EB4762211D30900D177C5 /* EmailListRequest.swift in Sources */,
 				F6C93BD72211B922004A6737 /* HTTPMethod.swift in Sources */,
 				F66EB4742211D2FF00D177C5 /* EmailCreationRequest.swift in Sources */,
+				F6848B6522155EE500DD1EEA /* RemoteTranslatable.swift in Sources */,
 				F6C93AD7220D9539004A6737 /* AuthenticationResponse.swift in Sources */,
 				F6848AD32214570C00DD1EEA /* MailSyncDeleteRequests.swift in Sources */,
 				F6C93AD6220D9539004A6737 /* ModuleType.swift in Sources */,
